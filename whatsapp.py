@@ -1,12 +1,12 @@
 from selenium import webdriver
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome("drivers/chromedriver.exe")
 driver.get("https://web.whatsapp.com/")
 
-user = input("Enter the user name")
-msg = input("Enter the message to be sent")
-count = int(input("Enter the no. of times message to be sent"))
-input("Enter anything after scanning")
+user = input("Enter the user name  :")
+msg = input("Enter the message to be sent  :")
+count = int(input("Enter the no. of times message to be sent   :"))
+input("Enter anything after scanning  :  ")
 
 user =  driver.find_element_by_xpath("//span[@title = '{}']".format(user))
 user.click()
